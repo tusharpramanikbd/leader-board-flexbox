@@ -84,6 +84,7 @@ global classes
 }
 .section-title{
 	color: #562EFF;
+	padding-bottom: 1rem;
 }
 /*  
 ===============
@@ -91,7 +92,7 @@ Navbar
 ===============
 */
 .navbar{
-	width: 100vw;
+	width: 100%;
 	background: #562EFF;
 	box-shadow: var(--dark-shadow);
 }
@@ -161,6 +162,7 @@ Leader board
 .section-leader-board {
 	margin-top: 1rem;
 }
+/* Top Player */
 .single-player {
 	display: flex;
 	flex-wrap: wrap;
@@ -190,6 +192,59 @@ Leader board
 		flex: 0 0 calc(33.333% - 1.5rem);
 	}
 }
+/* End of Top Player */
+hr {
+	color: #D1D1D1;
+	margin: 2rem 0;
+}
+/* Top Blog */
+.single-blog-img {
+	margin-top: 1rem;
+}
+.single-blog {
+	margin-top: 1rem;
+}
+.single-blog-details {
+	margin-top: 1rem;
+	padding-left: 0.5rem;
+}
+.single-blog-details span {
+	color: #562EFF;
+}
+.single-blog-details h3 {
+	font-weight: 500;
+	margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .blog-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.single-blog {
+		flex: 0 0 calc(50% - 2rem);
+	}
+	.single-blog-details h3 {
+		height: 68px;
+		margin-bottom: 0;
+	}
+}
+@media screen and (min-width: 992px) {
+  .single-blog {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.single-blog-img, 
+	.single-blog-details {
+		flex: 0 0 calc(50% - 0.5rem);
+	}
+	.single-blog {
+		margin-top: 2rem;
+	}
+}
+/* End of Top Blog */
 /*  
 ====================
 End of Leader board
