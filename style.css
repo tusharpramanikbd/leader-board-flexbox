@@ -80,7 +80,8 @@ global classes
 	min-height: auto;
 	background: var(--clr-white);
 	border-radius: 10px;
-	padding: 1rem
+	padding: 2rem;
+	margin-top: 1rem;
 }
 .section-title{
 	color: #562EFF;
@@ -159,9 +160,6 @@ End of Navbar
 Leader board
 ===============
 */
-.section-leader-board {
-	margin-top: 1rem;
-}
 /* Top Player */
 .single-player {
 	display: flex;
@@ -206,7 +204,7 @@ hr {
 }
 .single-blog-details {
 	margin-top: 1rem;
-	padding-left: 0.5rem;
+	padding-left: 0.25rem;
 }
 .single-blog-details span {
 	color: #562EFF;
@@ -243,10 +241,89 @@ hr {
 	.single-blog {
 		margin-top: 2rem;
 	}
+	.blog-title {
+		padding-bottom: 0;
+	}
 }
 /* End of Top Blog */
 /*  
 ====================
 End of Leader board
+====================
+*/
+
+/*  
+====================
+Latest Course
+====================
+*/
+.course-title {
+	padding-bottom: 0;
+}
+.single-course {
+	border-radius: 10px;
+	box-shadow: var(--light-shadow);
+	padding: 1rem;
+	margin-top: 1rem;
+}
+.single-course-details {
+	margin-top: 1rem;
+	margin-left: 0.25rem;
+}
+.single-course-details h3 {
+	font-weight: 500;
+	margin-bottom: 0.5rem
+}
+.single-course-details > p {
+	color: #ED6B4F;
+	margin-bottom: 0.5rem
+}
+.star-enable {
+	color: #FFC014;
+}
+.star-disable {
+	color: #AEAEAE;
+}
+.single-course-rating {
+	color: #A2A2A2;
+}
+.single-course-duration {
+	color: #FF4A60;
+	background: #FFE4E8;
+	display: inline-block;
+	padding: 2px 7px;
+	border-radius: 20px;
+	text-transform: lowercase;
+}
+.single-course-info{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 0.8rem;
+}
+@media screen and (min-width: 768px) {
+  .course-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.single-course {
+		flex: 0 0 calc(50% - 1rem);
+	}
+	.single-course-details h3 {
+		height: 64px;
+		margin-bottom: 0.5rem
+	}
+}
+@media screen and (min-width: 992px) {
+  .single-course {
+		flex: 0 0 calc(33.333% - 2rem);
+	}
+}
+/*  
+====================
+End of Latest Course
 ====================
 */
