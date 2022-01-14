@@ -8,11 +8,13 @@ Variables
 	--clr-white: #fff;
 	--clr-primary: rgb(248, 104, 88);
 	--ff-primary: 'Poppins', sans-serif;
-	--ff-secondary: 'Luxurious Roman', cursive;
+	--ff-secondary: 'Roboto', sans-serif;
 	--spacing: 0.25rem;
 	--radius: 0.25rem;
 	--light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 	--dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	--border: 1px solid red;
+	--clr-background: #E5E5E5;
 }
 
 /*
@@ -30,7 +32,7 @@ Global Styles
 }
 body {
 	font-family: var(--ff-primary);
-	background: var(--clr-white);
+	background: var(--clr-background);
 	line-height: 1.5;
 }
 ul {
@@ -46,7 +48,8 @@ img {
 h1,
 h2,
 h3,
-h4 {
+h4,
+p {
 	text-transform: capitalize;
 }
 
@@ -71,8 +74,124 @@ global classes
 	font-weight: normal;
 }
 .section-center{
-	width: 78vw;
+	width: 80vw;
 	margin: 0 auto;
 	max-width: 1170px;
 	min-height: auto;
+	background: var(--clr-white);
+	border-radius: 10px;
+	padding: 1rem
 }
+.section-title{
+	color: #562EFF;
+}
+/*  
+===============
+Navbar
+===============
+*/
+.navbar{
+	width: 100vw;
+	background: #562EFF;
+	box-shadow: var(--dark-shadow);
+}
+.nav-center{
+	width: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+.nav-logo{
+	width: 30px;
+}
+.nav-header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 2rem;
+}
+.nav-logo-div{
+	position: relative;
+}
+.nav-logo-div::after{
+	content: "Idea";
+	color: var(--clr-white);
+	position: absolute;
+	top: 50%;
+	left: 40px;
+	transform: translateY(-50%);
+}
+.nav-toggle{
+	background: transparent;
+	border: transparent;
+	color: var(--clr-white);
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+.nav-links{
+	display: none;
+}
+@media screen and (min-width: 992px) {
+	.nav-toggle{
+		display: none;
+	}
+	.nav-center{
+		display: flex;
+		justify-content: space-between;
+	}
+	.nav-links{
+		display: flex;
+		align-items: center;
+		padding-right: 2rem;
+	}
+	.nav-link{
+		color: var(--clr-white);
+		margin-right: 1rem;
+	}
+}
+/*  
+===============
+End of Navbar
+===============
+*/
+/*  
+===============
+Leader board
+===============
+*/
+.section-leader-board {
+	margin-top: 1rem;
+}
+.single-player {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-top: 1rem;
+}
+.single-player img {
+	width: 56px;
+	height: 56px;
+	margin-right: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .player-container {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		
+	}
+	.single-player {
+		flex: 0 0 calc(50% - 2rem);
+		margin-top: 2rem;
+	}
+}
+@media screen and (min-width: 992px) {
+  .single-player {
+		flex: 0 0 calc(33.333% - 1.5rem);
+	}
+}
+/*  
+====================
+End of Leader board
+====================
+*/
